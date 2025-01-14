@@ -90,6 +90,27 @@ const postLoginUser = async (req, res) => {
 };
 
 
+const getUser=async (req, res) => {
+
+
+    try{
+
+        const user = await User.findByPk(req.user.id);
+
+        if(user){
+            res.status(200).json({user:user});
+        }
+        else{
+            res.status(404).json({ message: 'User not found'});
+        }
+       
+    }
+    catch (err) {
+        res.status(500).json({ success: false, message: err });
+    }
+};
+
+
 const editProfile = async (req, res) => {
 
     const t=await sequelize.transaction();
@@ -98,8 +119,7 @@ const editProfile = async (req, res) => {
 
         const userId=req.user.id;
         const email = req.body.email;
-        const uname = req.body.name;
-        const phone = req.body.phone;
+        const uname = req.body.username;
         const password = req.body.password;
 
         const user = await User.findByPk(userId);
@@ -110,7 +130,6 @@ const editProfile = async (req, res) => {
                 if (!err) {
                     user.email=email;
                     user.name=uname;
-                    user.phone=phone;
                     user.password=hash;
     
                     await user.save({transaction:t});
@@ -141,4 +160,4 @@ const validateToken=async(req,res)=>{
 
 
 
-module.exports={postLoginUser,postSignupUser,editProfile,validateToken};
+module.exports={postLoginUser,postSignupUser,editProfile,validateToken,getUser};

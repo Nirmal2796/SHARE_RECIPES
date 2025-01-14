@@ -50,7 +50,7 @@ async function changeProfileMenu() {
 
         if (res.data.status === 'success') {
             profile_menu_list.innerHTML = `
-             <li><a href="#">My Profile</a></li>
+            <li><a href="../edit-profile/edit-profile.html">Edit Profile</a></li>
             <li><a href="../add-recipe/add-recipe.html">Add Recipe</a></li>
             <li><a href="../my-recipes/my-recipes.html">My Recipes</a></li>
             <li><a href="#">Favourite</a></li>
@@ -106,7 +106,6 @@ function addSecondaryIngredient() {
 
 //REMOVE SECONDARY INGREDIENT INPUT BOX
 function removeSecondaryIngredient() {
-
     secondary_ingredients.lastChild.remove();
 }
 
