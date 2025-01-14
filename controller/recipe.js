@@ -13,7 +13,7 @@ exports.addRecipe = async (req, res, next) => {
     const t = await sequelize.transaction();
 
     try {
-        const { recipeName, recipeDescription, recipePrepTime, dietary, recipeDifficulty, mainIngredients, secondaryIngredients, recipeSteps } = req.body;
+        const { recipeName, recipeDescription, recipePrepTime,recipeCookTime,recipeType, dietary, recipeDifficulty, mainIngredients, secondaryIngredients, recipeSteps } = req.body;
 
 
 
@@ -21,7 +21,9 @@ exports.addRecipe = async (req, res, next) => {
             name: recipeName,
             description: recipeDescription,
             preptime: recipePrepTime,
-            // dietary,
+            cookTime:recipeCookTime,
+            recipeType:recipeType,
+            dietary:dietary,
             recipeDifficulty: recipeDifficulty,
             steps: recipeSteps,
         }, { transaction: t });
@@ -195,13 +197,17 @@ exports.editRecipe = async (req, res, next) => {
         oldRecipe.destroy();
 
 
-        const { recipeName, recipeDescription, recipePrepTime, dietary, recipeDifficulty, mainIngredients, secondaryIngredients, recipeSteps } = req.body;
+        const { recipeName, recipeDescription, recipePrepTime,recipeCookTime,recipeType, dietary, recipeDifficulty, mainIngredients, secondaryIngredients, recipeSteps } = req.body;
+
+
 
         const recipe = await req.user.createRecipe({
             name: recipeName,
             description: recipeDescription,
-            preptime: recipePrepTime,
-            // dietary,
+            prepTime: recipePrepTime,
+            cookTime:recipeCookTime,
+            recipeType:recipeType,
+            dietary:dietary,
             recipeDifficulty: recipeDifficulty,
             steps: recipeSteps,
         }, { transaction: t });

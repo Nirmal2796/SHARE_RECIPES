@@ -17,8 +17,20 @@ const Recipe=sequelize.define('recipe',{
         type:Sequelize.STRING,
         allowNull:false
     },
-    preptime:{
+    prepTime:{
         type:Sequelize.INTEGER,
+        allowNull:false
+    },
+    cookTime:{
+        type:Sequelize.INTEGER,
+        allowNull:false
+    },
+    recipeType:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    dietary:{
+        type:Sequelize.STRING,
         allowNull:false
     },
     recipeDifficulty:{
@@ -26,8 +38,8 @@ const Recipe=sequelize.define('recipe',{
         allowNull:false
     },
     // image:{
-    //     type:Sequelize.STRING,
-    //     allowNull:false
+        // type:Sequelize.STRING,
+        // allowNull:false
     // },
     steps:{
         type:Sequelize.STRING,

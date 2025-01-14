@@ -4,6 +4,8 @@ const recipeName = document.getElementById('recipe-name');
 const recipeDescription = document.getElementById('description');
 // const recipeImage = document.getElementById('recipe-image');
 const recipePrepTime = document.getElementById('prep-time');
+const recipeCookTime = document.getElementById('cook-time');
+const recipeType=document.getElementById('recipe-type');
 const dietary = document.getElementById('dietary');
 const recipeDifficulty = document.getElementById('difficulty');
 const main_ingredients = document.getElementById('main-ingredients');
@@ -119,7 +121,9 @@ function fillValues(recipeDetails) {
         recipeName.value = recipeDetails.recipe.name;
         recipeDescription.value = recipeDetails.recipe.description;
         recipePrepTime.value = recipeDetails.recipe.preptime;
-        // dietary.value=recipeDetails.dietary;
+        recipeCookTime.value=recipeDetails.recipe.recipeCookTime,
+        recipeType.value=recipeDetails.recipe.recipeType,
+        dietary.value=recipeDetails.recipe.dietary;
         recipeDifficulty.value = recipeDetails.recipe.recipeDifficulty;
 
         setIngredientsValue(secondary_ingredients, recipeDetails.ingredients);
@@ -221,6 +225,8 @@ async function editRecipe(e) {
         recipeDescription: recipeDescription.value,
         // recipeImage: recipeImage.files[0],
         recipePrepTime: recipePrepTime.value,
+        recipeCookTime:recipeCookTime.value,
+        recipeType:recipeType.value,
         dietary: dietary.value,
         recipeDifficulty: recipeDifficulty.value,
         mainIngredients: getIngredients(main_ingredients),
