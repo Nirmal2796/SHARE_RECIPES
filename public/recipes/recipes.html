@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Delicous Recipes</h1>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+                <ul class="nav-list">
+                    <li><a href="../home/home.html">Home</a></li>
+                    <li><a href="../recipes/recipes.html">Recipes</a></li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li><i class="fa fa-user-circle" id="profile_icon" onclick="toggleProfileMenu()"
+                            style="font-size: 24px; cursor: pointer;"></i></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Menu -->
+    <div class="profile-menu" id="profile_menu">
+        <ul id="profile_menu_list">
+
+        </ul>
+    </div>
+
+    <section class="categories">
+        <h1>Categories</h1>
+        <div class="categories-section">
+            <div class="view-categories-arrow">&#9660;</div>
+            <ul class="categories-list">
+                <li>Baking</li>
+                <li>Beverages</li>
+                <li>Bread</li>
+                <li>BreakFast</li>
+                <li>Desert</li>
+                <li>Dinner</li>
+                <li>Lunch</li>
+                <li>Quick Meal</li>
+                <li>Salad</li>
+                <li>Sauce / Chutney</li>
+                <li>Snack</li>
+                <li>Soup</li>
+                <li>Special Ocasion</li>
+            </ul>
+        </div>
+    </section>
+
+    <!--................... Recipe Section .................. -->
+
+    <section class="featured-and-ingredients">
+    <!--................... Featured Recipes Section .................. -->
+        <div class="recipes">
+            <h1>Featured Recipes</h1>
+            <div class="recipe-section">
+                <div class="recipe-card">
+                    <img src="" alt="Recipe Image">
+                    <h2>Recipe Title</h2>
+                    <p>Recipe Description</p>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="" alt="Recipe Image">
+                    <h2>Recipe Title</h2>
+                    <p>Recipe Description</p>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="" alt="Recipe Image">
+                    <h2>Recipe Title</h2>
+                    <p>Recipe Description</p>
+                    <a href="#">View Recipe</a>
+                </div>
+            </div>
+        </div>
+
+    <!--................... Ingredients List Section .................. -->
+        <aside>
+            <div class="ingredients-list">
+                <h1>Ingredients</h1>
+                <ul>
+                    <li>Chicken</li>
+                    <li>Pasta</li>
+                    <li>Chocolate</li>
+                    <li>Fish</li>
+                    <li>Rice</li>
+                    <li>Noodles</li>
+                </ul>
+            </div>
+            <div class="user-list">
+                <h1>Authors</h1>
+                <ul>
+                    <li>John</li>
+                    <li>Komal</li>
+                    <li>Nick</li>
+                    <li>Anna</li>
+                    <li>Elsa</li>
+                    <li>Moana</li>
+                </ul>
+            </div>
+        </aside>
+
+
+    </section>
+
+
+
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Delicous Recipes</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

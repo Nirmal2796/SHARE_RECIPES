@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="login_div">
+
+        <form action="" id="login_form">
+            <div id="login_msg"></div>
+            <input type="email" name="login_email" id="login_email" placeholder="Email" required>
+            <input type="password" name="login_password" id="login_password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        
+            <button onclick="ShowRegister()">Don't have an account? Register here</button>
+             <!-- <a href="">Forgot Password</a> -->
+        
+        </form>
+    </div>
+
+<div id="register_div" hidden>
+    <form action="" id="register_form">
+        <div id="register_form_msg"></div>
+        <input type="text" name="register_name" id="register_name" placeholder="Username" required>
+        <input type="email" name="register_email" id="register_email" placeholder="Email" required>
+        <input type="password" name="register_password" id="register_password" placeholder="Password" required>
+        <button type="submit">Register</button>
+
+        <button onclick="ShowLogin()">Login </button>
+        
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

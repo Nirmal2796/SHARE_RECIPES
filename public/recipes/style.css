@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    min-width: 100vh;
+    background: #f8f8f8;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background: #222121;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-list{
+    display: none;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-weight: 550;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+
+/* Profile Menu */
+.profile-menu {
+    display: none;
+    position: fixed;
+    top: 60px; 
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 101;
+}
+
+.profile-menu ul {
+    list-style: none;
+}
+
+.profile-menu ul li {
+    padding: 10px 15px;
+}
+
+.profile-menu ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.profile-menu ul li a:hover {
+    background: #f1f1f1;
+}
+
+.profile-menu.show {
+    display: block;
+}
+
+
+/* <!--................... Categories Section .................. --> */
+
+.categories{
+    padding: 50px 0;
+}
+
+.categories h1{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+
+.categories-section{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.categories-section ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Hide the categories list by default */
+}
+
+.categories-section ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #585656;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* <!--................... Recipe Section .................. --> */
+
+.recipes {
+    padding: 50px 0;
+}
+
+.recipes h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.recipe-section {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 10px;
+}
+
+.recipe-card {
+    background: #fff;
+    margin: 30px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card h2{
+    font-size: 22px;
+    padding: 20px;
+}
+
+.recipe-card p{
+    font-size: 18px;
+    padding: 20px;
+}
+
+.recipe-card a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+
+footer{
+    background: #333;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.menu-icon{
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+
+/* Styling for the Featured Recipes and Ingredients List container */
+.featured-and-ingredients {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* Styling for the Ingredients List */
+.ingredients-list{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+
+.user-list{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* overflow: hidden; */
+}
+.ingredients-list, .user-list{
+    background: #fff;
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* padding: 20px; */
+}
+
+.ingredients-list h1 , .user-list h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+    padding: 10px 10px;
+}
+
+.ingredients-list ul , .user-list ul{
+    list-style: none;
+    padding: 20px;
+}
+
+.ingredients-list ul li , .user-list ul li{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+
+
+
+/* Adjust for smaller screens */
+@media only screen and (max-width: 768px) {
+    .featured-and-ingredients {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-section ul {
+        display: none; /* Hide the list on smaller screens */
+    }
+
+    .view-categories-arrow {
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+        margin: 20px 0;
+        display: block;
+    }
+    
+    
+    
+}
+
+.view-categories-arrow.rotate {
+    transform: rotate(180deg); /* Rotate the arrow when the list is shown */
+}
+
+
+/* ...........  Media Queries ............... */
+@media only screen and (min-width: 768px){
+    .menu-icon{
+        display: none;
+    }
+
+    .nav-list{
+        display: block;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+    }
+    .view-categories-arrow {
+        display: none; /* Hide the arrow on large screens */
+    }
+
+}
+
